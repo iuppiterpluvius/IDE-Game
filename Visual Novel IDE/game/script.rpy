@@ -2,29 +2,71 @@
 
 # Declara los personajes usados en el juego como en el ejemplo:
 
-define e = Character("Eileen")
-
+define an = Character('Anne')
+define az = Character('Azalea')
+define ve = Character('Venice')
 
 # El juego comienza aquí.
 
 label start:
+    
+    # Música inicial.
+    # play music "illurock.opus"
 
     # Muestra una imagen de fondo:
 
     scene bg room
 
     # Muestra un personaje:
+    
+    "Gzzz!"
 
-    show eileen happy
+    show anne
 
     # Presenta las líneas del diálogo.
+    
+    # play music "autosruidosos.algo"
 
-    "¡Hola, mundo!"
-
-    e "Has creado un nuevo juego Ren'Py."
-
-    e "Añade una historia, imágenes y música, ¡y puedes presentarlo al mundo!"
-
+    an "Un día mas aquí me hará enloquecer..."
+    
+    "He vivido en esta habitación los últimos tres meses, y ya siento que han sido años.
+     Fui bastante ingenua al creer que una vida de ciudad iba a ser divertida, decidí dejar mi casa para divertirme como nunca"
+    
+    "..."
+    
+    "Sinceramente no había pensado en el dinero que necesitaba para hacer eso."
+    
+    show an
+    
+    "Tengo que trabajar horas extras para mantenerme en este lugar, no quiero algo mas barato, ni vecinos mas molestos. Ya tengo suficiente con esos autos."
+    
+    "Toc Toc"
+        
+    "¿Qué? Es demasiado tarde... A quién se le ocurre venir a esta hora. Y sí es un criminal... Si abro esa puerta mi vida puede estar en peligro!"
+    
+    menu:
+                      
+        "Abrir la puerta":
+            jump carta
+        
+        "No abrir":
+            jump badending
+        
+    label carta:
+    
+    "Al momento abrí la puerta, no había nadie. Solo una carta en el suelto"
+    
+    # scene carta
+    
+    return
+    
+    label badending:
+    
+    "Final malo"
+    
+    return
+        
+    
     # Finaliza el juego:
 
     return
