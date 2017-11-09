@@ -21,7 +21,7 @@ label start:
     
     "Gzzz!"
 
-    show anne
+    show Anne
 
     # Presenta las líneas del diálogo.
     
@@ -50,7 +50,7 @@ label start:
             jump carta
         
         "No abrir":
-            jump badending
+            jump puertacerrada
         
     label carta:
     
@@ -60,7 +60,13 @@ label start:
     
     return
     
-    label badending:
+    label puertacerrada:
+        
+    "No abriré aunque revienten mis oidos con el insoportable golpe de puerta!"
+        
+    "..."
+        
+    "Ya no tocan. Quizá ya se fueron..."
     
     "Final malo"
     
